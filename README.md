@@ -1,21 +1,69 @@
-# React + TypeScript + Vite
+# Finnish Company Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application that provides a streamlined interface for searching Finnish companies using the Finnish Patent and Registration Office (PRH) API.
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
+## Features
 
-## Deploy Your Own
+- **Company Search**: Search companies by:
+  - Business ID (Finnish format: 1234567-8)
+  - Town name (e.g., Helsinki)
+  - Registration date range
+- **Validation**: Input validation for all search fields
+- **Pagination**: Browse through large result sets (100 companies per page)
+- **Company Details**: View comprehensive information for each company
+- **Responsive Design**: Works seamlessly on both desktop and mobile devices
 
-Deploy your own Vite project with Vercel.
+## Tech Stack
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/vite-react&template=vite-react)
+### Frontend
 
-_Live Example: https://vite-react-example.vercel.app_
+- **React**: Chosen for its component-based architecture and efficient rendering
+- **TypeScript**: Provides static typing to improve code quality and developer experience
+- **Vite**: Fast, modern build tool that significantly improves development experience
+- **Material UI**: Comprehensive component library with a clean, modern design system
+- **React Query**: Manages server state with built-in caching and optimistic updates
+- **DayJS**: Lightweight date manipulation library for handling registration dates
 
-### Deploying From Your Terminal
+### API
 
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
+- **PRH Open Data API**: Official Finnish Patent and Registration Office API for company information
 
-```shell
-$ vercel
+## Design Decisions
+
+- **React Query**: Used for state management and data fetching with built-in caching, which improves performance when navigating between pages
+- **Material UI**: Provides consistent, accessible UI components that follow Material Design principles
+- **TypeScript**: Ensures type safety across the application, reducing runtime errors
+- **Vite**: Chosen over Create React App for faster startup and hot module replacement
+- **Modular Architecture**: Components are designed to be reusable and maintainable
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 16 or later)
+- npm or pnpm (pnpm recommended)
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd finnish-company-search
 ```
+
+2. Install dependencies
+
+```bash
+# Using pnpm (recommended)
+pnpm install
+```
+
+#### Development Mode
+
+```bash
+# Using pnpm
+pnpm dev
+```
+
+This will start the development server at http://localhost:5173
