@@ -85,13 +85,13 @@ function CompanyResultsBase({
 
   // Memoize the handleChangePage callback
   const handleChangePage = useCallback(
-    (event: unknown, newPage: number) => {
+    (_: unknown, newPage: number) => {
       onPageChange({
         ...searchParams,
         page: newPage,
       });
     },
-    [currentPage, onPageChange, searchParams]
+    [onPageChange, searchParams]
   );
 
   // Memoize the handleViewDetails callback
